@@ -4,7 +4,8 @@ const connection = mysql.createConnection({
        host : 'db4free.net',
        database : 'devopsproject_1',
        user : 'devops_proj_1',
-       password : 'Devops_project_1'
+       password : 'Devops_project_1',
+       connectTimeout: 20000
 
 
 });
