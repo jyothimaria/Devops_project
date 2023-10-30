@@ -6,13 +6,13 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'sudo docker rm -f $(docker ps -a -q)'
-        sh 'sudo docker build -t nimmygeorge/webapplication:latest .'
+        sh 'docker rm -f $(docker ps -a -q)'
+        sh 'docker build -t nimmygeorge/webapplication:latest .'
        }
     }
     stage('Deploy') {
       steps {
-        sh 'sudo docker run -d -p 1010:1010 nimmygeorge/webapplication:latest'
+        sh 'docker run -d -p 1010:1010 nimmygeorge/webapplication:latest'
       }
     }
   }
