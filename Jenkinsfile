@@ -6,7 +6,6 @@ pipeline {
   stages {
     stage('Build') {
       steps {     
-                  sh 'docker rm -f $(docker ps -a -q)'
                   sh 'docker build -t nimmygeorge/webapplication:latest .'
        }
     }
